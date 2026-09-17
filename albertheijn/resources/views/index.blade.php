@@ -10,21 +10,13 @@
             </div>
 
             <div class="space-y-4">
-                <a
-                    href="/test"
-                    class="flex w-full items-center justify-between rounded-2xl bg-[#C64738] px-6 py-5 text-lg font-bold text-[#EADED6] shadow-lg transition hover:bg-[#7C3028] active:scale-[0.98]"
-                >
-                    <span>Start</span>
-                    <span class="text-2xl">→</span>
-                </a>
+                <x-button icon="→" href="/test" bg="bg-[#C64738]" text="text-[#EADED6]" border="border-[#283d3b]" width="w-50">
+                    Start
+                </x-button>
 
-                <a
-                    href="/admin"
-                    class="flex w-full items-center justify-between rounded-2xl bg-[#197278] border-2 border-[#283d3b] px-6 py-5 text-lg font-bold text-[#EADED6] transition hover:bg-[#283d3b] hover:text-[#EADED6] active:scale-[0.98]"
-                >
-                    <span>Admin panel</span>
-                    <span class="text-xl">⚙</span>
-                </a>
+                <x-button icon="⚙" href="/admin" bg="bg-[#197278]" text="text-[#EADED6]" border="border-[#283d3b]" width="w-50">
+                    Admin panel
+                </x-button>
             </div>
         </section>
     </div>
