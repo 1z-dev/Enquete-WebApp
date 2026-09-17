@@ -8,16 +8,18 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('player_sessions', function (Blueprint $table) {
+        Schema::create('sessies', function (Blueprint $table) {
             $table->id();
+            $table->dateTime('aangemaakt_op');
+            $table->dateTime('sessie_duur')->nullable();
             $table->string('email')->nullable();
-            $table->timestamp('completed_at')->nullable();
-            $table->timestamps();
+            $table->string('naam')->nullable();
+            $table->unsignedInteger('leeftijd')->nullable();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('player_sessions');
+        Schema::dropIfExists('sessies');
     }
 };
