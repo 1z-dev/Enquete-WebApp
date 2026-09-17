@@ -3,7 +3,7 @@
         <section class="flex flex-col justify-center py-30">
             <div class="mb-10">
 
-                <h1 class="max-w-sm text-5xl font-bold leading-[0.95] text-[#264646]">
+                <h1 class="max-w-sm mb-4 text-5xl font-bold leading-[0.95] text-[#264646]">
                     Paden Van Verstand
                 </h1>
 
@@ -11,10 +11,10 @@
 
             <div class="space-y-4">
                 <a
-                    href="/start"
+                    href="/test"
                     class="flex w-full items-center justify-between rounded-2xl bg-[#C64738] px-6 py-5 text-lg font-bold text-[#EADED6] shadow-lg transition hover:bg-[#7C3028] active:scale-[0.98]"
                 >
-                    <span>Start exploring</span>
+                    <span>Start</span>
                     <span class="text-2xl">→</span>
                 </a>
 
