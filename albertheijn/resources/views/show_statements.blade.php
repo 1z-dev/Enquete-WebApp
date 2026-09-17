@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stellingen&Antwoorden</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
     
     <script>
         window.questionnaire = {
@@ -15,7 +17,7 @@
         };
     </script>
 
-    <script src="{{ asset('resources/js/game_functions.js') }}" defer></script>
+    <script src="{{ asset('js/game_functions.js') }}" defer></script>
 
 </head>
 
@@ -24,13 +26,11 @@
         <div class="flex flex-col items-center text-center gap-5">
             <p id="statement" class="p-5 border-2 border-black rounded-2xl"></p>
             <div class="flex gap-5">
-                <button type="button" id="answer-1" class="px-5 py-3 border-2 border-black rounded-xl">Eens</button>
-                <button type="button" id="answer-2" class="px-5 py-3 border-2 border-black rounded-xl">Oneens</button>
+                <button type="button" id="answer-1" class="px-5 py-3 border-2 bg-blue-700 rounded-xl">Eens</button>
+                <button type="button" id="answer-2" class="px-5 py-3 border-2 bg-blue-700 rounded-xl">Oneens</button>
             </div>
         </div>
     </div>
 
-
-    <script src="resources\js\game_functions.js"></script>
 </body>
 </html>
