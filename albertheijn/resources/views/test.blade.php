@@ -1,10 +1,13 @@
 <x-layout>
     <div class="flex min-h-[calc(100vh-145px)] flex-col">
-        <section class="flex flex-col justify-center py-30">
+        <section class="flex flex-col justify-center py-10">
             <div class="mb-10">
                 <h1 class="max-w-sm mb-4 text-5xl font-bold leading-[0.95] text-[#264646]">
                     Component test page
                 </h1>
+
+                <x-form header="test form header">
+                </x-form>
 
                 <x-button 
                 href="/" 
@@ -19,23 +22,10 @@
                 </x-button>
 
                 <x-textinput
-                    name="email"
+                    name="example"
                     type="email"
-                    label="Email addres"
-                    placeholder="you@example.com"
-                />
-                <x-textinput
-                    name="naam"
-                    type="text"
-                    label="Naam"
-                    placeholder="Your name"
-                /> 
-                <x-textinput
-                    name="leeftijd"
-                    type="number"
-                    label="Leeftijd"
-                    placeholder="Your age"
-                    required="true"
+                    label="Example"
+                    placeholder="oooo example text input"
                 />
             </div>
         </section>

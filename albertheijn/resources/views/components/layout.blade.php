@@ -22,7 +22,7 @@
             </div>
         </header>
 
-        <main class="mx-auto min-h-[calc(100vh-145px)] max-w-6xl px-6 py-16">
+        <main class="mx-auto min-h-[calc(100vh-145px)] max-w-6xl px-6">
             {{ $slot }}
         </main>
     </body>

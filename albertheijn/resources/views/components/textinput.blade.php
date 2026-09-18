@@ -4,11 +4,12 @@
     'type' => 'text',
     'placeholder' => '',
     'required' => false,
+    'labelColor' => 'text-[#264646]',
 ])
 
 <div class="space-y-2">
     @if ($label)
-        <label for="{{ $name }}" class="block text-sm font-semibold text-[#264646] mt-3">
+        <label for="{{ $name }}" class="{{ $labelColor }} mt-3">
             {{ $label }}
         </label>
     @endif
@@ -22,7 +23,7 @@
         @if ($required) required @endif
     >
 </div>
-
+    
 {{-- Usage example:
     <x-textinput
         name="email"

@@ -1,6 +1,6 @@
 <x-layout>
     <div class="flex min-h-[calc(100vh-145px)] flex-col">
-        <section class="flex flex-col justify-center py-30">
+        <section class="flex flex-col justify-center py-15">
             <div class="mb-10">
 
                 <h1 class="max-w-sm mb-4 text-5xl font-bold leading-[0.95] text-[#264646]">
