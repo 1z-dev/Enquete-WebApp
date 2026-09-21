@@ -10,9 +10,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test');
 });
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [StatementController::class, 'statistics']);
 
 Route::get('/beantwoord-stellingen', [StatementController::class, 'show'])
     ->name('statements.show');
