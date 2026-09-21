@@ -1,38 +1,42 @@
- <div class="max-w-lg mx-auto bg-[#264646] p-8 m-4 rounded-2xl shadow-xl">
-    <form method="POST" action="#" class="space-y-6">
+@props([
+    'header' => 'Formulier',
+    'action' => '',
+    'method' => 'POST',
+    'fields' => [],
+    'submitText' => 'Verzenden',
+])
+
+<div class="mx-auto m-4 max-w-lg rounded-2xl bg-[#264646] p-8 shadow-xl">
+    <form
+        method="{{ $method }}"
+        action="{{ $action }}"
+        class="space-y-6"
+    >
         @csrf
+
         <h2 class="text-2xl font-bold text-[#EADED6]">
             {{ $header }}
         </h2>
-        <x-textinput
-            name="name"
-            label="Naam"
-            placeholder="Vul je naam in"
-            required
-            labelColor="text-[#EADED6]"
-        />
 
-        <x-textinput
-            name="email"
-            type="email"
-            label="E-mailadres"
-            placeholder="naam@example.com"
-            required
-            labelColor="text-[#EADED6]"
-        />
+        @foreach ($fields as $field)
+            <x-textinput
+                :name="$field['name']"
+                :type="$field['type'] ?? 'text'"
+                :label="$field['label'] ?? null"
+                :placeholder="$field['placeholder'] ?? ''"
+                :value="$field['value'] ?? ''"
+                :required="$field['required'] ?? false"
+                :labelColor="$field['labelColor'] ?? 'text-[#EADED6]'"
+            />
+        @endforeach
 
-        <x-textinput
-            name="age"
-            type="number"
-            label="Leeftijd"
-            placeholder="Vul je leeftijd in"
-            min="0"
-            required
-            labelColor="text-[#EADED6]"
-        />
+        {{ $slot }}
 
-        <x-button href="#" size="small" class="mt-6">
-            Verzenden
-        </x-button>
+        <button
+            type="submit"
+            class="mt-6 rounded-2xl bg-[#C64738] px-4 py-3 font-bold text-[#EADED6] transition hover:bg-[#283d3b]"
+        >
+            {{ $submitText }}
+        </button>
     </form>
 </div>

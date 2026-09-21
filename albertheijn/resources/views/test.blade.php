@@ -6,8 +6,33 @@
                     Component test page
                 </h1>
 
-                <x-form header="test form header">
-                </x-form>
+                <x-form
+                    header="Formulier"
+                    action=""
+                    submitText="opslaan"
+                    :fields="[
+                        [
+                            'name' => 'name',
+                            'label' => 'Naam',
+                            'placeholder' => 'Vul je naam in',
+                            'required' => true,
+                        ],
+                        [
+                            'name' => 'email',
+                            'type' => 'email',
+                            'label' => 'E-mailadres',
+                            'placeholder' => 'naam@example.com',
+                            'required' => true,
+                        ],
+                        [
+                            'name' => 'age',
+                            'type' => 'number',
+                            'label' => 'Leeftijd',
+                            'min' => 0,
+                            'required' => true,
+                        ],
+                    ]"
+                />
 
                 <x-button 
                 href="/" 
@@ -27,6 +52,13 @@
                     label="Example"
                     placeholder="oooo example text input"
                 />
+                <x-statistic :statistics="[
+                    ['label' => 'Question 1', 'eens' => 10, 'oneens' => 5],
+                    ['label' => 'Question 2', 'eens' => 7, 'oneens' => 8],
+                    ['label' => 'Question 3', 'eens' => 12, 'oneens' => 3],
+                    ['label' => 'Question 4', 'eens' => 5, 'oneens' => 10],
+                    ['label' => 'Question 5', 'eens' => 8, 'oneens' => 7],
+                ]" />
             </div>
         </section>
     </div>
