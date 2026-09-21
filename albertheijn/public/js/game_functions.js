@@ -8,7 +8,8 @@ let currentStatement = 0;
 function showStatement() {
     const statement = statements[currentStatement];
 
-    document.getElementById('statement').textContent = statement.statement;
+    document.getElementById('statement').textContent = statement.stelling;
+    document.getElementById('context').textContent = statement.context;
 }
 
 

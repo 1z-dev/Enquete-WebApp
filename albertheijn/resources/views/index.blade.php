@@ -10,7 +10,7 @@
             </div>
 
             <div class="space-y-4">
-                <x-button icon="→" href="/test" bg="bg-[#C64738]" text="text-[#EADED6]" border="border-[#283d3b]" width="w-50">
+                <x-button icon="→" href="/beantwoord-stellingen" bg="bg-[#C64738]" text="text-[#EADED6]" border="border-[#283d3b]" width="w-50">
                     Start
                 </x-button>
 
