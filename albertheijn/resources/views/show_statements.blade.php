@@ -21,10 +21,16 @@
 </head>
 
 <body>
+    <video id="path-video" class="h-full absolute object-cover z-[-1]" preload="auto" muted playsinline>
+    <source src="{{ asset('assets\Wylie_B_Caudill_video_no_watermark.mp4') }}" type="video/mp4">
+    Your browser does not support the video element.</video>
+
     <div class="h-screen flex items-center justify-center">
         <main class="flex flex-col items-center text-center gap-5">
-            <h1 id="statement" class="p-5 border-2 border-black rounded-2xl"></h1>
-            <p id="context" class="p-5 border-2 border-black rounded-2xl"></p>
+            
+            <h1 id="statement" class="p-5 border-2 border-black rounded-2xl bg-white"></h1>
+            <p id="context" class="p-5 border-2 border-black rounded-2xl bg-white"></p>
+
             <form id="answer-form" class="flex flex-col gap-5">
                 <div class="flex gap-5">
 

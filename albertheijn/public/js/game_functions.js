@@ -2,6 +2,8 @@ const statements = window.questionnaire.statements;
 const answerUrl = window.questionnaire.answerUrl;
 const finishedUrl = window.questionnaire.finishedUrl;
 
+const path_video = document.getElementById('path-video');
+
 let currentStatement = 0;
 
 
@@ -54,12 +56,18 @@ async function answerQuestion(answer) {
         if (data.success) {
             currentStatement++;
 
-            if (currentStatement >= statements.length) {
-                window.location.href = finishedUrl;
-                return;
+            path_video.currentTime = 0;
+            path_video.play()
+
+            path_video.onended = function () {
+                if (currentStatement >= statements.length) {
+                    window.location.href = finishedUrl;
+                    return;
+                }
+                
+            showStatement();
             }
 
-            showStatement();
         }
 
     } catch (error) {
@@ -73,6 +81,5 @@ document.getElementById('answer-form').addEventListener('submit', function (even
     const answer = event.submitter.value;
     answerQuestion(answer);
 });
-
 
 showStatement();
