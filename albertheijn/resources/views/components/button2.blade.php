@@ -20,8 +20,8 @@
     $widthClass = $width === 'auto' ? 'w-fit' : $width;
 @endphp
 
-<a
-    href="{{ $href }}"
+<button
+    type="button"
     class="inline-flex {{ $widthClass }} items-center justify-between rounded-2xl
         {{ $sizes[$size] ?? $sizes['medium'] }}
         {{ $bg }} border-2 {{ $border }} {{ $text }}
@@ -29,11 +29,11 @@
 >
     <span>{{ $slot }}</span>
     <span class="text-xl">{{ $icon }}</span>
-</a>
+</button>
 
 {{-- usage example
-<x-button 
-href="#" 
+<x-button2 
+type="button" 
 icon="🔥" 
 size="medium"/"large"/"small" 
 text="text-[#EADED6]" 
@@ -43,4 +43,4 @@ hoverText="hover:text-[#EADED6]"
 border="border-[#283d3b]"
 width="auto"/"w-50" >
     Click Me
-</x-button> --}}
+</x-button2> --}}
