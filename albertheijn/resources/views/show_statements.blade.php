@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <video id="path-video" class="h-full absolute object-cover z-[-1]" preload="auto" muted playsinline>
+    <video id="path-video" class="h-full absolute object-cover z-[-1] left-1/2 transform -translate-x-1/2" preload="auto" muted playsinline>
     <source src="{{ asset('assets\Wylie_B_Caudill_video_no_watermark.mp4') }}" type="video/mp4">
     Your browser does not support the video element.</video>
 
