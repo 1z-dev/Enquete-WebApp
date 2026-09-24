@@ -19,7 +19,23 @@ class StatementController extends Controller
 
     public function finished()
     {
-        return view('index');
+            $sessieId = session('sessie_id');
+
+        $answers = Antwoord::where('sessie_id', $sessieId)->get();
+
+        $total = $answers->count();
+
+        $eens = $answers->where('eens', true)->count();
+        $oneens = $answers->where('eens', false)->count();
+
+        $statistics = [
+            '0' => $total > 0 ? ($eens / $total) * 100 : 0,
+            '1' => $total > 0 ? ($oneens / $total) * 100 : 0,
+        ];
+
+        return view('result', [
+            'statistics' => $statistics,
+        ]);
     }
 
     public function statistics()
