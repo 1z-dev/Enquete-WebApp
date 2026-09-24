@@ -6,6 +6,8 @@
                     Contact
                 </h1>
                 <x-form
+                    action="{{ route('contact.submit') }}"
+                    method="POST"
                     header="Contact"
                     :fields="[
                         ['name' => 'naam', 'label' => 'Naam', 'placeholder' => 'Vul je naam in'],
@@ -13,9 +15,7 @@
                         ['name' => 'leeftijd', 'label' => 'Leeftijd', 'type' => 'number', 'placeholder' => 'Typ je leeftijd...', 'required' => true],
                     ]"
                     submitText="Versturen"
-                >
-                    <p class="text-sm text-[#EADED6]">We reageren binnen 24 uur.</p>
-                </x-form>
+                />
                 <x-statistic :statistics="$statistics" />
             </div>
         </section>

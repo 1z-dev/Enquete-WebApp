@@ -2,7 +2,7 @@
 
 @php
     $maximum = collect($statistics)
-        ->flatMap(fn ($statistic) => [$statistic['eens'], $statistic['oneens']])
+        ->flatMap(fn ($statistic) => [$statistic['1'], $statistic['0']])
         ->max() ?: 1;
 @endphp
 
@@ -31,33 +31,33 @@
         >
             @forelse ($statistics as $statistic)
                 @php
-                    $eensHeight = ($statistic['eens'] / $maximum) * 100;
-                    $oneensHeight = ($statistic['oneens'] / $maximum) * 100;
+                    $eensHeight = ($statistic['1'] / $maximum) * 100;
+                    $oneensHeight = ($statistic['0'] / $maximum) * 100;
                 @endphp
 
                 <div class="flex w-32 flex-col items-center">
                     <div class="flex h-64 items-end gap-2">
                         <div class="flex h-full flex-col justify-end">
                             <span class="mb-1 text-center text-xs text-[#EADED6]">
-                                {{ $statistic['eens'] }}
+                                {{ $statistic['1'] }}
                             </span>
 
                             <div
                                 class="w-10 rounded-t bg-[#197278]"
                                 style="height: {{ max($eensHeight, 2) }}%"
-                                title="Eens: {{ $statistic['eens'] }}"
+                                title="Eens: {{ $statistic['1'] }}"
                             ></div>
                         </div>
 
                         <div class="flex h-full flex-col justify-end">
                             <span class="mb-1 text-center text-xs text-[#EADED6]">
-                                {{ $statistic['oneens'] }}
+                                {{ $statistic['0'] }}
                             </span>
 
                             <div
                                 class="w-10 rounded-t bg-[#C64738]"
                                 style="height: {{ max($oneensHeight, 2) }}%"
-                                title="Oneens: {{ $statistic['oneens'] }}"
+                                title="Oneens: {{ $statistic['0'] }}"
                             ></div>
                         </div>
                     </div>

@@ -18,10 +18,10 @@ class SessieFactory extends Factory
 
         return [
             'aangemaakt_op' => $created,
-            'sessie_duur' => fake()->optional()->dateTimeBetween($created, '+1 hour'),
-            'email' => fake()->optional()->safeEmail(),
-            'naam' => fake()->optional()->name(),
-            'leeftijd' => fake()->optional()->numberBetween(16, 90),
+            'sessie_duur' => fake()->dateTimeBetween($created, '+1 hour'),
+            'email' => fake()->safeEmail(),
+            'naam' => fake()->name(),
+            'leeftijd' => fake()->numberBetween(16, 90),
         ];
     }
 }

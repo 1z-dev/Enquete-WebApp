@@ -3,10 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StatementController;
 use App\Http\Controllers\AnswerController;
+use App\Http\Controllers\SessionController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
+
 Route::get('/test', function () {
     return view('test');
 });
@@ -20,3 +22,6 @@ Route::post('/beantwoord-stellingen', [AnswerController::class, 'answer'])
 
 Route::get('/resultaat', [StatementController::class, 'finished'])
     ->name('statements.finished');
+
+Route::post('/contact', [SessionController::class, 'submit'])
+    ->name('contact.submit'); 

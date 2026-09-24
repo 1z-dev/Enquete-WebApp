@@ -16,7 +16,7 @@ class AntwoordFactory extends Factory
         return [
             'sessie_id' => Sessie::factory(),
             'stelling_id' => Stelling::factory(),
-            'eens' => fake()->randomElement(['eens', 'oneens']),
+            'eens' => fake()->randomElement(['1', '0']),
             'uitleg' => fake()->optional()->sentence(),
             'beantwoord_op' => fake()->dateTimeBetween('-1 year', 'now'),
         ];

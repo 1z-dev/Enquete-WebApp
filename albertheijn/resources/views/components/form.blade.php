@@ -6,24 +6,6 @@
     'submitText' => 'Verzenden',
 ])
 
-{{--
-    Usage example:
-
-    <x-form
-        header="Contact"
-        action="{{ route('contact.store') }}"
-        method="POST"
-        :fields="[
-            ['name' => 'naam', 'label' => 'Naam', 'placeholder' => 'Vul je naam in', 'required' => true],
-            ['name' => 'email', 'label' => 'E-mail', 'type' => 'email', 'placeholder' => 'voorbeeld@email.nl', 'required' => true],
-            ['name' => 'bericht', 'label' => 'Bericht', 'type' => 'textarea', 'placeholder' => 'Typ je bericht...'],
-        ]"
-        submitText="Versturen"
-    >
-        <p class="text-sm text-[#EADED6]">We reageren binnen 24 uur.</p>
-    </x-form>
---}}
-
 <div class="mx-auto m-4 max-w-lg rounded-2xl bg-[#264646] p-8 shadow-xl">
     <form
         method="{{ $method }}"
@@ -58,3 +40,21 @@
         </button>
     </form>
 </div>
+
+{{--
+    Usage example:
+
+    <x-form
+        header="Contact"
+        action="{{ route('contact.store') }}"
+        method="POST"
+        :fields="[
+            ['name' => 'naam', 'label' => 'Naam', 'placeholder' => 'Vul je naam in', 'required' => true],
+            ['name' => 'email', 'label' => 'E-mail', 'type' => 'email', 'placeholder' => 'voorbeeld@email.nl', 'required' => true],
+            ['name' => 'bericht', 'label' => 'Bericht', 'type' => 'textarea', 'placeholder' => 'Typ je bericht...'],
+        ]"
+        submitText="Versturen"
+    >
+        <p class="text-sm text-[#EADED6]">We reageren binnen 24 uur.</p>
+    </x-form>
+--}}
