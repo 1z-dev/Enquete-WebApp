@@ -11,11 +11,16 @@
                     header="Contact"
                     :fields="[
                         ['name' => 'naam', 'label' => 'Naam', 'placeholder' => 'Vul je naam in'],
-                        ['name' => 'email', 'label' => 'E-mail', 'type' => 'email', 'placeholder' => 'voorbeeld@email.nl', 'required' => true],
+                        ['name' => 'email', 'label' => 'E-mail', 'type' => 'email', 'placeholder' => 'voorbeeld@email.nl'],
                         ['name' => 'leeftijd', 'label' => 'Leeftijd', 'type' => 'number', 'placeholder' => 'Typ je leeftijd...', 'required' => true],
                     ]"
                     submitText="Versturen"
-                />
+                >
+                    <label class="flex items-start gap-2 text-sm text-[#EADED6]">
+                        <input type="checkbox" name="tos" value="1" required class="mt-1">
+                        <span>Ik ga akkoord met de <a href="#" class="underline">voorwaarden</a></span>
+                    </label>
+                </x-form>
                 <x-statistic :statistics="$statistics" />
             </div>
         </section>

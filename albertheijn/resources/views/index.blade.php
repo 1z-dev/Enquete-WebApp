@@ -17,7 +17,6 @@
                 <x-button icon="🛈" href="/beantwoord-stellingen" bg="bg-[#197278]" text="text-[#EADED6]" border="border-[#283d3b]" width="w-50">
                     Beantwoord stellingen
                 </x-button>
-                
 
                 <x-button icon="⚙" href="/admin" bg="bg-[#197278]" text="text-[#EADED6]" border="border-[#283d3b]" width="w-50">
                     Admin panel

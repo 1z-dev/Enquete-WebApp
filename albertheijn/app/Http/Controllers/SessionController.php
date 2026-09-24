@@ -18,6 +18,7 @@ class SessionController extends Controller
         'naam' => 'nullable|string|max:255',
         'email' => 'required|email|max:255',
         'leeftijd' => 'required|integer|min:1',
+        'tos' => 'accepted',
     ]);
 
     \App\Models\Sessie::create([
