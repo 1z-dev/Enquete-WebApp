@@ -57,6 +57,12 @@ async function answerQuestion(answer) {
             currentStatement++;
 
             path_video.currentTime = 0;
+            if (answer == "1") {
+                path_video.style.transform = 'translateX(-50%) scaleX(-1)';
+            }
+            else {
+                path_video.style.transform = 'translateX(-50%) scaleX(1)';
+            }
             path_video.play()
 
             path_video.onended = function () {

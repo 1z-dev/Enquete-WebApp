@@ -22,29 +22,14 @@
 
 <body>
     <video id="path-video" class="h-full absolute object-cover z-[-1] left-1/2 transform -translate-x-1/2" preload="auto" muted playsinline>
-    <source src="{{ asset('assets\Wylie_B_Caudill_video_no_watermark.mp4') }}" type="video/mp4">
+    <source src="{{ asset('assets\path.mp4') }}" type="video/mp4">
     Your browser does not support the video element.</video>
 
-    <div class="h-screen flex items-center justify-center">
-        <main class="flex flex-col items-center text-center gap-5">
+    <div class="h-screen flex items-center justify-center flex-col gap-[20%]">
+        <main class="flex flex-col items-center text-center gap-3">
             
             <h1 id="statement" class="p-5 border-2 border-black rounded-2xl bg-white"></h1>
-            <p id="context" class="p-5 border-2 border-black rounded-2xl bg-white"></p>
-
-            <form id="answer-form" class="flex flex-col gap-5">
-                <div class="flex gap-5">
-
-                    <button type="submit" name="answer" value="0" id="answer-1" 
-                    class="inline-flex w-auto items-center justify-between rounded-2xl px-6 py-5 text-lg bg-[#3b5f5b] 
-                    border-2 border-[#283d3b] text-[#EADED6] font-bold transition hover:bg-[#283d3b] hover:text-[#EADED6] 
-                    active:scale-[0.98]">Eens</button>
-
-                    <button type="submit" name="answer" value="1" id="answer-2" 
-                    class="inline-flex w-auto items-center justify-between rounded-2xl px-6 py-5 text-lg bg-[#3b5f5b]   
-                    border-2 border-[#283d3b] text-[#EADED6] font-bold transition hover:bg-[#283d3b] hover:text-[#EADED6] 
-                    active:scale-[0.98]">Oneens</button>
-
-                </div>
+            <p id="context" class="p-2 border-2 border-black rounded-2xl bg-white"></p>
 
                 <div>
 
@@ -52,8 +37,24 @@
                     <textarea type="text" name="uitleg" id="uitleg" class="bg-white border-2 rounded-2xl px-5 border-[#3b5f5b]  text-black"></textarea>
 
                 </div>
+
+            <form id="answer-form" class="flex flex-col gap-5">
+                <div class="flex gap-5">
+
+                    <button type="submit" name="answer" value="1" id="answer-1" 
+                    class="inline-flex w-auto items-center justify-between rounded-2xl px-6 py-5 text-lg bg-[#3b5f5b] 
+                    border-2 border-[#283d3b] text-[#EADED6] font-bold transition hover:bg-[#283d3b] hover:text-[#EADED6] 
+                    active:scale-[0.98]">Eens</button>
+
+                    <button type="submit" name="answer" value="0" id="answer-2" 
+                    class="inline-flex w-auto items-center justify-between rounded-2xl px-6 py-5 text-lg bg-[#3b5f5b]   
+                    border-2 border-[#283d3b] text-[#EADED6] font-bold transition hover:bg-[#283d3b] hover:text-[#EADED6] 
+                    active:scale-[0.98]">Oneens</button>
+
+                </div>
             </form>
         </main>
+        <img src="{{ asset('assets\guy.png') }}" class="h-[200px]">
     </div>
 </body>
 </html>
