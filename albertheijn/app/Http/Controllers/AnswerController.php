@@ -11,7 +11,7 @@ class AnswerController extends Controller
     public function answer(Request $request)
     {
         $request->validate([
-            'statement_id' => ['required', 'integer'],
+            'statement_id' => ['required', 'integer', 'exists:stellingen,id'],
             'answer' => ['required', 'boolean'],
             'uitleg' => ['nullable', 'string'],
         ]);
@@ -23,16 +23,17 @@ class AnswerController extends Controller
         // Get/create one database session for this questionnaire
         $sessieId = session('sessie_id');
 
-        if (!$sessieId) {
+        $sessie = $sessieId ? Sessie::find($sessieId) : null;
+
+        if (!$sessie) {
             $sessie = Sessie::create([
                 'aangemaakt_op' => now(),
             ]);
 
             session([
                 'sessie_id' => $sessie->id,
+                'answers' => [],
             ]);
-        } else {
-            $sessie = Sessie::findOrFail($sessieId);
         }
 
         $answers = session('answers', []);
