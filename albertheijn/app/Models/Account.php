@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Database\Factories\AccountFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Account extends Model
+class Account extends Authenticatable
 {
+    /** @use HasFactory<AccountFactory> */
+    use HasFactory;
+
     protected $table = 'accounts';
 
     public $timestamps = false;
@@ -26,5 +31,11 @@ class Account extends Model
 
     protected $casts = [
         'aangemaakt_op' => 'datetime',
+        'wachtwoord_hash' => 'hashed',
     ];
+
+    public function getAuthPasswordName(): string
+    {
+        return 'wachtwoord_hash';
+    }
 }

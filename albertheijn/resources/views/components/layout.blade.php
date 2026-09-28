@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="nl" class="h-full">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,8 @@
 
                 <nav class="flex gap-6 text-sm">
                     <a href="/" class="transition hover:text-[#207C83]">Home</a>
-                    <a href="#" class="transition hover:text-[#207C83]">Login</a>
+                    <a href="{{ route('login') }}" class="transition hover:text-[#207C83]">Login</a>
+                    <a href="/admin/stellingen" class="transition hover:text-[#207C83]">Admin</a>
                 </nav>
             </div>
         </header>
