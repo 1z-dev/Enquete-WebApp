@@ -4,11 +4,14 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 uses(RefreshDatabase::class);
 
-it('toont het contactformulier', function () { // shows contact form
+it('toont het contactformulier', function () {
     $this->get('/contact')
-        ->assertOk()        // page load
-        ->assertSee('Contact')  // page content
-        ->assertSee('name="email"', false);  // email input field exists
+        ->assertOk()
+        ->assertSee('Contact')
+        ->assertSee('name="email"', false)
+        ->assertSee('name="tos"', false)
+        ->assertSee('voorwaarden')
+        ->assertSee('href="' . route('tos') . '"', false);
 });
 
 it('slaat een geldig contactformulier op', function () { // saves valid form
@@ -56,4 +59,10 @@ it('renders answer statistics', function () { // renders statistics component wi
 it('shows a message when there are no answers', function () { // shows message for empty statistics
     $this->blade('<x-statistic :statistics="[]" />')
         ->assertSee('Er zijn nog geen antwoorden.');
+});
+
+it('opent de voorwaardenpagina', function () {
+    $this->get(route('tos'))
+        ->assertOk()
+        ->assertViewIs('TOS');
 });
