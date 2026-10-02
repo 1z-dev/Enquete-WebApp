@@ -41,3 +41,7 @@ Route::get('/resultaat', [StatementController::class, 'finished'])
 
 Route::post('/contact', [SessionController::class, 'submit'])
     ->name('contact.submit'); 
+
+Route::get('/tos', function () {
+    return view('TOS');
+})->name('tos');

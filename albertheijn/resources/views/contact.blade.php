@@ -18,7 +18,7 @@
                 >
                     <label class="flex items-start gap-2 text-sm text-[#EADED6]">
                         <input type="checkbox" name="tos" value="1" required class="mt-1">
-                        <span>Ik ga akkoord met de <a href="#" class="underline">voorwaarden</a></span>
+                        <span>Ik ga akkoord met de <a href="{{ route('tos') }}" class="underline">voorwaarden</a></span>
                     </label>
                 </x-form>
                 <x-statistic :statistics="$statistics" />
