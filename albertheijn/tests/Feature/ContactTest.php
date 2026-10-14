@@ -56,6 +56,21 @@ it('renders answer statistics', function () { // renders statistics component wi
         ->assertSee('2');
 });
 
+it('berekent de relatieve hoogtes van de antwoordstatistieken', function () {
+    $this->blade(
+        '<x-statistic :statistics="$statistics" />',
+        ['statistics' => [
+            ['1' => 4, '0' => 2, 'label' => 'Stelling A'],
+            ['1' => 8, '0' => 4, 'label' => 'Stelling B'],
+        ]]
+    )
+        ->assertSee('Stelling A')
+        ->assertSee('Stelling B')
+        ->assertSee('style="height: 50%"', false)
+        ->assertSee('style="height: 25%"', false)
+        ->assertSee('style="height: 100%"', false);
+});
+
 it('shows a message when there are no answers', function () { // shows message for empty statistics
     $this->blade('<x-statistic :statistics="[]" />')
         ->assertSee('Er zijn nog geen antwoorden.');
