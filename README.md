@@ -116,7 +116,7 @@ Make sure you have installed:
 ## Future Improvements
 
 If I had more than 8 days to program my section of this project, I would've created better assets, and added more animations. The site isn't very visually interesting right now.
-I also would've made the route system be more based on people's answers, rather than being mostly random.
+I also would've made the route system be more based on people's answers, rather than being mostly random, as well as added more comments inside the file (we didn't need them at the time and forgot).
 On top of that, I would've added the points system, that rewards participation. A userstory I had to abandon because of the deadline.
 
 ## Author
