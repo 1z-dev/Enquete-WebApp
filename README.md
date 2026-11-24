@@ -42,7 +42,7 @@ Since this was a group project, it might be nice to have some clarity on which f
 I chose to use wireframe sketches because the final result visuals didn't reach wishes due to a lack of time.
 | Enquête page | Result/Reward page |
 |:---:|:---:|
-| <img src="https://postimg.cc/PNStDWmv" alt="Choosing opinion screen" height="400"> | <img src="https://postimg.cc/629X2qqc" alt="Can of soup reward" height="400"> |
+| <img src="https://i.postimg.cc/fTNk65yC/image-2026-11-24-154948809.png" alt="Choosing opinion screen" height="400"> | <img src="https://i.postimg.cc/vBnHK6dJ/image-2026-11-24-155024678.png" alt="Can of soup reward" height="400"> |
 
 ### Prerequisites
 
