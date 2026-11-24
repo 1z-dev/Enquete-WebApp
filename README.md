@@ -42,7 +42,7 @@ Since this was a group project, it might be nice to have some clarity on which f
 I chose to use wireframe sketches because the final result visuals didn't reach wishes due to a lack of time.
 | Enquête page | Result/Reward page |
 |:---:|:---:|
-| <img src="https://media.discordapp.net/attachments/972440464827510849/1571567370835722311/image.png?ex=6afb33ab&is=6af9e22b&hm=f40381b4b4550e28431851029888ebadbecd6f3796ce74450584d9f4da231ce2&format=webp&quality=lossless" alt="Choosing opinion screen" height="400"> | <img src="https://media.discordapp.net/attachments/972440464827510849/1571567371179532389/image.png?ex=6afb33ab&is=6af9e22b&hm=0590960863f97e24021b62dbecfdf4c3a72473b373c05a3aa115e4b0f1761077&format=webp&quality=lossless" alt="Can of soup reward" height="400"> |
+| <img src="https://postimg.cc/PNStDWmv" alt="Choosing opinion screen" height="400"> | <img src="https://postimg.cc/629X2qqc" alt="Can of soup reward" height="400"> |
 
 ### Prerequisites
 
